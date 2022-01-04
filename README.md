@@ -76,12 +76,11 @@ Load balancing ensures that the application will be highly available, in additio
 - Extneral access to web servers is restricted by the load balancer, no external direct access is allowed
 - Internal access is provided via a jump box. The jump box allows for administration tasks to take place
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the metrics and system logs.
+- The Filebeat shipper records system logs
+- The Metricbeat shipper periodically collects system metrics
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function    | IP Address | Operating System |
 |----------|-------------|------------|------------------|
@@ -98,7 +97,7 @@ Only the Jump-Box machine can accept connections from the Internet. Access to th
 - 99.23.195.35
 
 Machines within the network can only be accessed by Jump-Box.
-- 10.0.0.1
+- IP address 10.0.0.7
 
 A summary of the access policies in place can be found in the table below.
 
