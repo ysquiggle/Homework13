@@ -60,7 +60,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
    ```
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -97,36 +97,24 @@ Only the Jump-Box machine can accept connections from the Internet. Access to th
 - 99.23.195.35
 
 Machines within the network can only be accessed by Jump-Box.
-- IP address 10.0.0.7
+- IP address 10.0.0.1
 
-A summary of the access policies in place can be found in the table below.
-
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump-Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- Automating configuration increases scalability and ensures consistant results
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
-
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+- Downloads docker and related add-ons
+- Downloads and launches the elk container image
+- Starts required system services on required ports
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- 10.0.0.8
+- 10.0.0.9
 
-We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
